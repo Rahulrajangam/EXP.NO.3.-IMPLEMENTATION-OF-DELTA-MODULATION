@@ -1,42 +1,49 @@
-## EXP.NO.3.-IMPLEMENTATION-OF-DELTA-MODULATION
+# EXP.NO.3.-IMPLEMENTATION-OF-DELTA-MODULATION
 
 3.Implementation of Delta Modulation 
   
-## AIM:  
-
+## AIM    
  To study the Delta modulation using the Delta Modulation trainer kit. 
- 
-## APPARATUS REQUIRED:
+## APPARATUS REQUIRED
+Trainer Kit, DSO(10MHz) , Patch Cords and Power Supply (0-30V)   
+## PROCEDURE
+Initial Setup:
 
-Trainer Kit, DSO(10MHz) , Patch Cords and Power Supply (0-30V) 
+Switch off all devices before connections. Connect the power supply to the trainer kit. Ensure the kit is set to Delta Modulation mode (not Adaptive Delta or PCM).
 
-## PROCEDURE:
+Input Signal Configuration:
 
-1.Delta Modulation (DM) is a simple technique for converting analog signals into digital form. In DM, the analog signal is sampled at a rate much higher than the Nyquist rate. Instead of encoding the absolute value of each sample, DM encodes the difference between the current input and the previous output. 
+Connect a function generator to the analog input terminal of the kit. Set the function generator to produce a sine wave (1 kHz typical) with a small amplitude (say 2V peak-to-peak). Connect the output of the function generator to the analog input port of the kit.
 
-2.This difference is represented by a single bit: if the signal is rising, a '1' is transmitted; if it is falling, a '0' is transmitted. The receiver uses this stream of bits to reconstruct the signal by incrementing or decrementing the previous value by a fixed step size.
+Observe Modulated Output:
 
-3.A low-pass filter then smooths the staircase output to recover the analog waveform. DM is simple and requires less bandwidth than PCM but can suffer from slope overload distortion if the signal changes rapidly, and granular noise if the step size is too large for slowly varying signals. 
+Power ON the kit. Connect an oscilloscope probe to the modulated output (DM signal) terminal. Observe the Delta Modulated waveform on Channel 1 of the CRO.
 
-4.Adaptive methods can improve performance.
+Demodulation:
 
-## CIRCUIT DIAGRAM:
-![image](https://github.com/user-attachments/assets/3d9cc6ff-8d44-4e65-b0f5-5498d0a1a35e)
+Connect the demodulator output to Channel 2 of the oscilloscope. Observe the reconstructed signal and compare it with the input sine wave.
+
+Adjust Parameters (Optional):
+
+Some kits allow you to vary the step size (Δ). Try varying the input frequency or amplitude and observe how the modulator handles slope overload or granular noise. Note the effect of changes in input frequency and amplitude on the output waveform.
+
+Record Observations: Draw the waveforms for: i) Input analog signal ii) Integrater output iii) sample output iv) Filter output
+## CIRCUIT DIAGRAM
+
+![image](https://github.com/user-attachments/assets/ed257ce4-9f9c-48d9-91d4-26f9c667ca68)
+
+## MODEL GRAPH
+![image](https://github.com/user-attachments/assets/9cdbd885-8e58-4fc3-968f-3effa4f90673)
+
+## TABLE
+![delta mod table](https://github.com/user-attachments/assets/38dd23d4-e7a4-4269-9957-680eaa78ae18)
+
+## OUTPUT GRAPHS
+
+![delta op 1](https://github.com/user-attachments/assets/d50fec1e-7462-425f-a05b-43f221aaa2c7)
+![delta op 2](https://github.com/user-attachments/assets/df8685f8-2bb4-41a1-9afc-eeca562f1087)
 
 
-## MODEL GRAPH:
-![image](https://github.com/user-attachments/assets/e93f994b-5fab-4823-a621-8959d96d58c5)
+## RESULT 
 
-
-## TABLE:
-![WhatsApp Image 2025-04-28 at 22 56 51_4802ef43](https://github.com/user-attachments/assets/aad2b2d8-6dd8-4c56-ae9d-6acdfc0ed6f3)
-
-
-
-## OUTPUT GRAPHS:
-![WhatsApp Image 2025-04-28 at 22 56 50_b7553417](https://github.com/user-attachments/assets/650014df-7d88-4388-b254-8868aa778544)
-
-
-
-## RESULT:
-Thus, the delta modulation is studied and the delta modulated waveform is obtained.
+Thus the delta modulation is verified successfully and the output waveform is obtained.
